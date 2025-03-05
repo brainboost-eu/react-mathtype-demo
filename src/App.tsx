@@ -1,12 +1,12 @@
-import { InlineEditor } from '@src/components/inline-editor'
+import { Editor } from '@src/components/editor'
 import './styles/global.css'
 
 function App() {
   return (
     <main className="max-w-xl mx-auto h-svh grid place-items-center">
-      <div className="w-full px-4 py-3 *:last:outline flex flex-col gap-2">
+      <div className="w-full px-4 py-3 *:last:border-b *:outline-none flex flex-col gap-2">
         <label htmlFor="editor">Input</label>
-        <InlineEditor id="editor" />
+        <Editor id="editor" />
       </div>
     </main>
   )
