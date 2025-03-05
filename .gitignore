@@ -1,0 +1,21 @@
+# Node.js dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Vite build output
+dist/
+.vite/
+
+# Editor and OS files
+.idea/
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Env files
+.env.local
+.env.*.local
