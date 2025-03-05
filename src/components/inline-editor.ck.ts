@@ -1,4 +1,6 @@
 import type { Editor } from 'ckeditor5'
+import MathType from '@wiris/mathtype-ckeditor5/src/plugin.js'
+
 import {
   Alignment,
   Autoformat,
@@ -66,6 +68,10 @@ CKInlineEditor.builtinPlugins = [
   List,
   ListProperties,
   Markdown,
+  // FIXME Adding this breaks everything and causes 'Uncaught CKEditorError: ckeditor-duplicated-modules'.
+  // Comment out 'MathType,' to see working version.
+  // Please visit https://github.com/wiris/html-integrations/issues/1041
+  MathType,
   Paragraph,
   PasteFromOffice,
   PictureEditing,
@@ -85,6 +91,9 @@ CKInlineEditor.defaultConfig = {
       { language: 'javascript', label: 'JavaScript' },
       { language: 'php', label: 'PHP' },
     ],
+  },
+  toolbar: {
+    items: ['MathType', 'ChemType'],
   },
   image: {
     resizeUnit: 'px',
